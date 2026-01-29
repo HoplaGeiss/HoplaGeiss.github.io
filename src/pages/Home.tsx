@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({
@@ -8,7 +8,8 @@ export default function Home() {
     design: false
   });
 
-  const VISIBLE_SKILLS_COUNT = 5;
+  const [visibleCounts, setVisibleCounts] = useState<Record<string, number>>({});
+  const containerRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const skillsData = {
     frontend: {
@@ -43,6 +44,73 @@ export default function Home() {
       [category]: !prev[category]
     }));
   };
+
+  useEffect(() => {
+    const calculateVisibleSkills = () => {
+      const newVisibleCounts: Record<string, number> = {};
+      
+      Object.keys(skillsData).forEach((key) => {
+        const container = containerRefs.current[key];
+        if (!container) return;
+        
+        // Create a temporary container to measure
+        const tempContainer = document.createElement('div');
+        tempContainer.style.cssText = 'position: absolute; visibility: hidden; display: flex; gap: 0.5rem; flex-wrap: nowrap;';
+        container.appendChild(tempContainer);
+        
+        const containerWidth = container.offsetWidth;
+        let totalWidth = 0;
+        let count = 0;
+        
+        const skills = skillsData[key as keyof typeof skillsData].skills;
+        
+        for (let i = 0; i < skills.length; i++) {
+          const span = document.createElement('span');
+          span.className = 'bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 rounded px-3 py-2 text-sm whitespace-nowrap';
+          span.textContent = skills[i];
+          tempContainer.appendChild(span);
+          
+          const spanWidth = span.offsetWidth + 8; // 8px for gap
+          
+          if (totalWidth + spanWidth <= containerWidth) {
+            totalWidth += spanWidth;
+            count++;
+          } else {
+            break;
+          }
+        }
+        
+        container.removeChild(tempContainer);
+        newVisibleCounts[key] = Math.max(1, count); // Always show at least 1
+      });
+      
+      setVisibleCounts(newVisibleCounts);
+    };
+
+    // Initial calculation with a small delay to ensure layout is ready
+    const initialTimeout = setTimeout(calculateVisibleSkills, 100);
+    
+    // Use ResizeObserver to watch for container size changes
+    const resizeObserver = new ResizeObserver(() => {
+      calculateVisibleSkills();
+    });
+    
+    // Observe all containers
+    Object.values(containerRefs.current).forEach(container => {
+      if (container) {
+        resizeObserver.observe(container);
+      }
+    });
+    
+    // Also listen to window resize as fallback
+    window.addEventListener('resize', calculateVisibleSkills);
+    
+    return () => {
+      clearTimeout(initialTimeout);
+      resizeObserver.disconnect();
+      window.removeEventListener('resize', calculateVisibleSkills);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
@@ -91,13 +159,17 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             {Object.entries(skillsData).map(([key, category]) => {
               const isExpanded = expandedCategories[key];
-              const visibleSkills = isExpanded ? category.skills : category.skills.slice(0, VISIBLE_SKILLS_COUNT);
-              const hasMore = category.skills.length > VISIBLE_SKILLS_COUNT;
+              const visibleCount = visibleCounts[key] || 5;
+              const visibleSkills = isExpanded ? category.skills : category.skills.slice(0, visibleCount);
+              const hasMore = category.skills.length > visibleCount;
               
               return (
                 <div key={key} className="bg-gray-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg p-5">
                   <h3 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">{category.title}</h3>
-                  <div className={`flex gap-2 mb-3 ${isExpanded ? 'flex-wrap' : 'flex-nowrap overflow-x-auto'}`}>
+                  <div 
+                    ref={(el) => { containerRefs.current[key] = el; }}
+                    className={`flex gap-2 mb-3 ${isExpanded ? 'flex-wrap' : 'overflow-hidden'}`}
+                  >
                     {visibleSkills.map((skill) => (
                       <span
                         key={skill}
@@ -112,7 +184,7 @@ export default function Home() {
                       onClick={() => toggleCategory(key)}
                       className="text-sm text-orange-500 hover:text-orange-600 hover:underline transition-colors font-medium cursor-pointer"
                     >
-                      {isExpanded ? '− Show less' : `+ ${category.skills.length - VISIBLE_SKILLS_COUNT} more`}
+                      {isExpanded ? '− Show less' : `+ ${category.skills.length - visibleCount} more`}
                     </button>
                   )}
                 </div>
