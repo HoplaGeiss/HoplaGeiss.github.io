@@ -152,7 +152,9 @@ export default function Home() {
             {/* Text Content */}
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-5xl md:text-6xl font-bold mb-4">
-                {t('hero.greeting')} <span className="text-orange-500">Gabriel Muller</span>
+                {t('hero.greeting')}
+                <br />
+                <span className="text-orange-500">Gabriel Muller</span>
               </h1>
               <p className="text-2xl md:text-3xl text-slate-700 dark:text-slate-300 mb-6">
                 {t('hero.title')}
