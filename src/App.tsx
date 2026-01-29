@@ -7,7 +7,7 @@ import Post from './pages/Post';
 
 function App() {
   return (
-    <Router basename="/hoplaWeb">
+    <Router basename="/">
       <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-slate-900 transition-colors">
         <Header />
         <main className="flex-grow">
