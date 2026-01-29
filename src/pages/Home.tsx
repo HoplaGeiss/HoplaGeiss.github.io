@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+  const { t } = useTranslation();
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({
     frontend: false,
     backend: false,
@@ -13,27 +15,21 @@ export default function Home() {
 
   const skillsData = {
     frontend: {
-      title: "Front End",
       skills: ['Angular', 'React', 'TypeScript', 'Micro Frontends', 'JavaScript','Sass', 'RxJS', 'Redux', 'd3.js', 'PrimeNG', 'Angular Material', 'Echarts', 'AG Grid', 'npm Library Creation']
     },
     mobile: {
-      title: "Mobile",
       skills: ['React Native', 'Expo Go']
     },
     backend: {
-      title: "Back End",
       skills: ['Node.js', 'NestJS', 'Java', '.NET', 'Express', 'MongoDB', 'Ruby on Rails', 'PostgreSQL']
     },
     cicd: {
-      title: "CI/CD",
       skills: ['Docker', 'Azure Pipelines', 'GitLab Pipelines', 'Argo CD', 'OpenShift']
     },
     testing: {
-      title: "Testing",
       skills: ['Cypress', 'Playwright', 'Vitest', 'Jest']
     },
     other: {
-      title: "Other",
       skills: ['Figma', 'Storybook', 'OAuth2']
     }
   };
@@ -119,7 +115,7 @@ export default function Home() {
         <div className="container mx-auto max-w-4xl">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
             {/* Profile Picture */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex flex-col items-center gap-4">
               <img
                 srcSet="/images/profile-200w.jpg 200w, /images/profile-300w.jpg 300w, /images/profile-400w.jpg 400w"
                 sizes="(max-width: 768px) 200px, (max-width: 1024px) 300px, 400px"
@@ -128,23 +124,46 @@ export default function Home() {
                 className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-primary shadow-lg shadow-primary/20"
                 loading="eager"
               />
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="/Gabriel_Muller_CV.pdf"
+                  download="Gabriel_Muller_CV.pdf"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors shadow-sm"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <span className="text-sm">{t('contact.downloadCV')}</span>
+                </a>
+                <a
+                  href="https://hoplageiss.github.io/CommitX/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-semibold rounded-lg transition-colors border border-slate-300 dark:border-slate-700 shadow-sm"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                  <span className="text-sm">{t('contact.portfolioApp')}</span>
+                </a>
+              </div>
             </div>
 
             {/* Text Content */}
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-5xl md:text-6xl font-bold mb-4">
-                Hi, I'm <span className="text-orange-500">Gabriel Muller</span>
+                {t('hero.greeting')} <span className="text-orange-500">Gabriel Muller</span>
               </h1>
               <p className="text-2xl md:text-3xl text-slate-700 dark:text-slate-300 mb-6">
-                Senior Fullstack Developer (JS/TS Focus)
+                {t('hero.title')}
               </p>
               <div className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed space-y-2">
-                <p>Software engineer with 10 years of experience.</p>
-                <p>In my last four roles, I led the UI architecture of front-end applications and have experience leading up to 10 UI developers across multiple scrum teams.</p>
-                <p>Highly hands-on with a strong focus on end-to-end testing (Cypress, Playwright) and owning/optimizing UI CI/CD pipelines.</p>
-                <p>Experienced with multiple backend technologies—strongest with Node.js/NestJS, but comfortable with Ruby, .NET, and Java.</p>
-                <p>Comfortable working independently or leading multiple developers in agile environments.</p>
-                <p>I hold two MSc degrees—one in Parallel and Distributed Computing and another in IT Management.</p>
+                <p>{t('hero.intro1')}</p>
+                <p>{t('hero.intro2')}</p>
+                <p>{t('hero.intro3')}</p>
+                <p>{t('hero.intro4')}</p>
+                <p>{t('hero.intro5')}</p>
+                <p>{t('hero.intro6')}</p>
               </div>
             </div>
           </div>
@@ -154,7 +173,7 @@ export default function Home() {
       {/* Skills Section */}
       <section className="py-12 px-4 bg-white dark:bg-slate-800 transition-colors">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold mb-6 text-orange-500">Skills & Technologies</h2>
+          <h2 className="text-3xl font-bold mb-6 text-orange-500">{t('skills.title')}</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             {Object.entries(skillsData).map(([key, category]) => {
@@ -165,7 +184,7 @@ export default function Home() {
               
               return (
                 <div key={key} className="bg-gray-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg p-5">
-                  <h3 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">{category.title}</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">{t(`skills.categories.${key}`)}</h3>
                   <div 
                     ref={(el) => { containerRefs.current[key] = el; }}
                     className={`flex gap-2 mb-3 ${isExpanded ? 'flex-wrap' : 'overflow-hidden'}`}
@@ -184,7 +203,7 @@ export default function Home() {
                       onClick={() => toggleCategory(key)}
                       className="text-sm text-orange-500 hover:text-orange-600 hover:underline transition-colors font-medium cursor-pointer"
                     >
-                      {isExpanded ? '− Show less' : `+ ${category.skills.length - visibleCount} more`}
+                      {isExpanded ? t('skills.showLess') : `+ ${category.skills.length - visibleCount} ${t('skills.more')}`}
                     </button>
                   )}
                 </div>
@@ -197,111 +216,111 @@ export default function Home() {
       {/* Experience Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold mb-8 text-orange-500">Experience</h2>
+          <h2 className="text-3xl font-bold mb-8 text-orange-500">{t('experience.title')}</h2>
           <div className="space-y-8">
             <div className="border-l-4 border-primary pl-6">
-              <h3 className="text-xl font-semibold mb-1">Lead Angular Developer</h3>
+              <h3 className="text-xl font-semibold mb-1">{t('experience.jobs.postfinance.title')}</h3>
               <p className="text-orange-500 mb-2">
                 <a href="https://www.postfinance.ch" target="_blank" rel="noopener noreferrer" className="hover:underline">
                   PostFinance
-                </a> 🇨🇭 • <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-0.5 rounded">Contract</span> • July 2025 - Present
+                </a> 🇨🇭 • <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-0.5 rounded">{t('experience.contract')}</span> • {t('experience.jobs.postfinance.period')}
               </p>
-              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">Analytics Team - Internal Reporting Tool</p>
+              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">{t('experience.jobs.postfinance.subtitle')}</p>
               <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                <li>Developing advanced internal reporting tool for stakeholders to create reports and insights on PostFinance databases</li>
-                <li>Working with Angular 18, Angular Material, and ECharts</li>
-                <li>Leading end-to-end test implementation with Playwright</li>
-                <li>Setting up and maintaining GitLab CI/CD pipelines</li>
+                <li>{t('experience.jobs.postfinance.responsibilities.0')}</li>
+                <li>{t('experience.jobs.postfinance.responsibilities.1')}</li>
+                <li>{t('experience.jobs.postfinance.responsibilities.2')}</li>
+                <li>{t('experience.jobs.postfinance.responsibilities.3')}</li>
               </ul>
             </div>
 
             <div className="border-l-4 border-slate-600 pl-6">
-              <h3 className="text-xl font-semibold mb-1">Lead Angular Developer</h3>
+              <h3 className="text-xl font-semibold mb-1">{t('experience.jobs.suva.title')}</h3>
               <p className="text-slate-600 dark:text-slate-400 mb-2">
                 <a href="https://www.suva.ch" target="_blank" rel="noopener noreferrer" className="hover:underline">
                   SUVA
-                </a> 🇨🇭 • <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-0.5 rounded">Contract</span> • July 2024 - December 2024 (6 months)
+                </a> 🇨🇭 • <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-0.5 rounded">{t('experience.contract')}</span> • {t('experience.jobs.suva.period')}
               </p>
-              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">Internal Web Applications - Client Claims Processing</p>
+              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">{t('experience.jobs.suva.subtitle')}</p>
               <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                <li>Developed and maintained four internal web applications used by ~500 colleagues</li>
-                <li>Built features using Angular 18, PrimeNG, and Redux</li>
-                <li>Created and maintained end-to-end tests with Playwright</li>
+                <li>{t('experience.jobs.suva.responsibilities.0')}</li>
+                <li>{t('experience.jobs.suva.responsibilities.1')}</li>
+                <li>{t('experience.jobs.suva.responsibilities.2')}</li>
               </ul>
             </div>
 
             <div className="border-l-4 border-slate-600 pl-6">
-              <h3 className="text-xl font-semibold mb-1">Lead Angular / Java Developer</h3>
+              <h3 className="text-xl font-semibold mb-1">{t('experience.jobs.swissre.title')}</h3>
               <p className="text-slate-600 dark:text-slate-400 mb-2">
                 <a href="https://www.swissre.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
                   Swiss Re
-                </a> 🇨🇭 • <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-0.5 rounded">Contract</span> • November 2019 - June 2024 (~4.5 years)
+                </a> 🇨🇭 • <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-0.5 rounded">{t('experience.contract')}</span> • {t('experience.jobs.swissre.period')}
               </p>
-              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">Finance Department - Angular Modernization</p>
+              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">{t('experience.jobs.swissre.subtitle')}</p>
               <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                <li>Led UI architecture across multiple teams (10 front-end developers across 6 scrum teams)</li>
-                <li>Created a shared UI components library from scratch used by all teams (45+ components, based on Angular Material)</li>
-                <li>Built numerous Angular [8-17] applications to modernize finance department processes</li>
-                <li>Owned and maintained front-end Azure CI/CD pipelines</li>
-                <li>Created and maintained backend APIs in Java</li>
-                <li>Led Cypress end-to-end testing implementation with Docker</li>
+                <li>{t('experience.jobs.swissre.responsibilities.0')}</li>
+                <li>{t('experience.jobs.swissre.responsibilities.1')}</li>
+                <li>{t('experience.jobs.swissre.responsibilities.2')}</li>
+                <li>{t('experience.jobs.swissre.responsibilities.3')}</li>
+                <li>{t('experience.jobs.swissre.responsibilities.4')}</li>
+                <li>{t('experience.jobs.swissre.responsibilities.5')}</li>
               </ul>
             </div>
 
             <div className="border-l-4 border-slate-600 pl-6">
-              <h3 className="text-xl font-semibold mb-1">Senior JS / React Developer</h3>
+              <h3 className="text-xl font-semibold mb-1">{t('experience.jobs.marksandspencer.title')}</h3>
               <p className="text-slate-600 dark:text-slate-400 mb-2">
                 <a href="https://www.marksandspencer.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
                   Marks and Spencer
-                </a> 🇬🇧 • <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-0.5 rounded">Contract</span> • February 2019 - November 2019 (9 months)
+                </a> 🇬🇧 • <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-0.5 rounded">{t('experience.contract')}</span> • {t('experience.jobs.marksandspencer.period')}
               </p>
-              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">Sofa Configurator Project</p>
+              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">{t('experience.jobs.marksandspencer.subtitle')}</p>
               <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                <li>Led development of store locator map integration using Vanilla JS and Bing Maps V8</li>
-                <li>Built interactive sofa configurator application using React.js</li>
+                <li>{t('experience.jobs.marksandspencer.responsibilities.0')}</li>
+                <li>{t('experience.jobs.marksandspencer.responsibilities.1')}</li>
               </ul>
             </div>
 
             <div className="border-l-4 border-slate-600 pl-6">
-              <h3 className="text-xl font-semibold mb-1">Lead Angular / Node Developer</h3>
+              <h3 className="text-xl font-semibold mb-1">{t('experience.jobs.managed247.title')}</h3>
               <p className="text-slate-600 dark:text-slate-400 mb-2">
                 <a href="https://managed.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:underline">
                   Managed 24/7
-                </a> 🇬🇧 • <span className="inline-block bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-0.5 rounded">Permanent</span> • April 2017 - January 2019 (~2 years)
+                </a> 🇬🇧 • <span className="inline-block bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-0.5 rounded">{t('experience.permanent')}</span> • {t('experience.jobs.managed247.period')}
               </p>
-              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">Cloud-based Real-time Analytics System</p>
+              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">{t('experience.jobs.managed247.subtitle')}</p>
               <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                <li>Architected full-stack application from scratch using Angular 6, Node.js, Express, and MongoDB</li>
-                <li>Built custom real-time data visualization using d3.js, Socket.io, and SignalR</li>
-                <li>Developed highly customizable dashboards using Gridster.js, RxJS, and Redux</li>
-                <li>Researched and implemented CI/CD pipeline using Docker, Codeship, and Quay.io</li>
+                <li>{t('experience.jobs.managed247.responsibilities.0')}</li>
+                <li>{t('experience.jobs.managed247.responsibilities.1')}</li>
+                <li>{t('experience.jobs.managed247.responsibilities.2')}</li>
+                <li>{t('experience.jobs.managed247.responsibilities.3')}</li>
               </ul>
             </div>
 
             <div className="border-l-4 border-slate-600 pl-6">
-              <h3 className="text-xl font-semibold mb-1">Angular Developer / Scrum Master</h3>
+              <h3 className="text-xl font-semibold mb-1">{t('experience.jobs.workforce.title')}</h3>
               <p className="text-slate-600 dark:text-slate-400 mb-2">
                 <a href="https://www.workforcesoftware.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
                   WorkForce Software
-                </a> 🇬🇧 • <span className="inline-block bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-0.5 rounded">Permanent</span> • March 2016 - February 2017 (~1 year)
+                </a> 🇬🇧 • <span className="inline-block bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-0.5 rounded">{t('experience.permanent')}</span> • {t('experience.jobs.workforce.period')}
               </p>
-              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">Scheduling and Forecasting SaaS Solution</p>
+              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">{t('experience.jobs.workforce.subtitle')}</p>
               <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                <li>Facilitated scrum ceremonies including grooming, sprint planning, and retrospectives</li>
-                <li>Drove continuous improvement initiatives that increased team productivity</li>
-                <li>Increased Angular.js unit test coverage from 60% to 90%</li>
-                <li>Led automated end-to-end testing implementation</li>
+                <li>{t('experience.jobs.workforce.responsibilities.0')}</li>
+                <li>{t('experience.jobs.workforce.responsibilities.1')}</li>
+                <li>{t('experience.jobs.workforce.responsibilities.2')}</li>
+                <li>{t('experience.jobs.workforce.responsibilities.3')}</li>
               </ul>
             </div>
 
             <div className="border-l-4 border-slate-600 pl-6">
-              <h3 className="text-xl font-semibold mb-1">Startup Co-founder</h3>
-              <p className="text-slate-600 dark:text-slate-400 mb-2">Unisphere 🇫🇷 • September 2014 - March 2016 (~1.5 years)</p>
-              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">Cloud-based Virtual Learning Environment</p>
+              <h3 className="text-xl font-semibold mb-1">{t('experience.jobs.unisphere.title')}</h3>
+              <p className="text-slate-600 dark:text-slate-400 mb-2">{t('experience.jobs.unisphere.company')} 🇫🇷 • {t('experience.jobs.unisphere.period')}</p>
+              <p className="text-slate-600 dark:text-slate-400 mb-3 italic">{t('experience.jobs.unisphere.subtitle')}</p>
               <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                <li>Built Angular.js / Ruby on Rails MVP in 5 months, deployed to 5 universities</li>
-                <li>Selected to join both Strasbourg and Oxford incubators</li>
-                <li>Gained extensive experience in SaaS product lifecycle, UX/UI development, customer success, and investor pitching</li>
+                <li>{t('experience.jobs.unisphere.responsibilities.0')}</li>
+                <li>{t('experience.jobs.unisphere.responsibilities.1')}</li>
+                <li>{t('experience.jobs.unisphere.responsibilities.2')}</li>
               </ul>
             </div>
           </div>
@@ -311,25 +330,21 @@ export default function Home() {
       {/* Education Section */}
       <section className="py-16 px-4 bg-white dark:bg-slate-800 transition-colors">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold mb-8 text-orange-500">Education</h2>
+          <h2 className="text-3xl font-bold mb-8 text-orange-500">{t('education.title')}</h2>
           <div className="space-y-6">
             <div className="border-l-4 border-primary pl-6">
-              <h3 className="text-xl font-semibold mb-1">MSc in Distributed & Parallel Computing</h3>
-              <p className="text-orange-500 mb-2">Cranfield University, UK • September 2013 - September 2014</p>
+              <h3 className="text-xl font-semibold mb-1">{t('education.degrees.cranfield.title')}</h3>
+              <p className="text-orange-500 mb-2">{t('education.degrees.cranfield.school')} • {t('education.degrees.cranfield.period')}</p>
               <p className="text-slate-700 dark:text-slate-300">
-                Focused on parallel computing and high-performance computing. 
-                Gained hands-on experience in virtualization, containerization, and cloud computing 
-                through the university's cutting-edge supercomputer facility ASTRAL.
+                {t('education.degrees.cranfield.description')}
               </p>
             </div>
 
             <div className="border-l-4 border-slate-600 pl-6">
-              <h3 className="text-xl font-semibold mb-1">MSc in IT Management</h3>
-              <p className="text-slate-600 dark:text-slate-400 mb-2">Rouen Engineering School (ESIGELEC), France • September 2013 - September 2014</p>
+              <h3 className="text-xl font-semibold mb-1">{t('education.degrees.esigelec.title')}</h3>
+              <p className="text-slate-600 dark:text-slate-400 mb-2">{t('education.degrees.esigelec.school')} • {t('education.degrees.esigelec.period')}</p>
               <p className="text-slate-700 dark:text-slate-300">
-                Developed comprehensive understanding of computer science through hands-on experience 
-                with multiple programming languages and technologies. Project-based curriculum built 
-                strong communication and collaboration skills.
+                {t('education.degrees.esigelec.description')}
               </p>
             </div>
           </div>
@@ -339,18 +354,18 @@ export default function Home() {
       {/* Languages Section */}
       <section className="py-16 px-4 bg-white dark:bg-slate-800 transition-colors">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold mb-8 text-orange-500">Languages</h2>
+          <h2 className="text-3xl font-bold mb-8 text-orange-500">{t('languages.title')}</h2>
           <div className="max-w-lg">
             <div className="space-y-3">
               {[
-                { name: 'French', level: 5, label: 'Native' },
-                { name: 'Alsatian', level: 5, label: 'Native' },
-                { name: 'English', level: 4, label: 'Fluent' },
-                { name: 'German', level: 3.5, label: 'C1' },
-                { name: 'Polish', level: 1.5, label: 'Basic' }
+                { key: 'french', level: 5, labelKey: 'native' },
+                { key: 'alsatian', level: 5, labelKey: 'native' },
+                { key: 'english', level: 5, labelKey: 'fluent' },
+                { key: 'german', level: 3.5, labelKey: 'c1' },
+                { key: 'polish', level: 1.5, labelKey: 'basic' }
               ].map((lang) => (
-                <div key={lang.name} className="flex items-center gap-3">
-                  <span className="text-slate-700 dark:text-slate-300 font-medium w-24 text-sm">{lang.name}</span>
+                <div key={lang.key} className="flex items-center gap-3">
+                  <span className="text-slate-700 dark:text-slate-300 font-medium w-24 text-sm">{t(`languages.list.${lang.key}`)}</span>
                   <div className="flex gap-1.5 flex-1 max-w-xs">
                     {[1, 2, 3, 4, 5].map((dot) => {
                       const isFilled = dot <= lang.level;
@@ -369,7 +384,7 @@ export default function Home() {
                       );
                     })}
                   </div>
-                    <span className="text-slate-600 dark:text-slate-400 text-xs w-14">{lang.label}</span>
+                    <span className="text-slate-600 dark:text-slate-400 text-xs w-14">{t(`languages.levels.${lang.labelKey}`)}</span>
                 </div>
               ))}
             </div>
@@ -380,27 +395,27 @@ export default function Home() {
       {/* Hobbies Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold mb-8 text-orange-500">Interests & Hobbies</h2>
+          <h2 className="text-3xl font-bold mb-8 text-orange-500">{t('hobbies.title')}</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg p-6 hover:border-primary transition-colors">
               <div className="text-4xl mb-3 text-center">⛰️</div>
-              <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-2 text-center">Mountaineering</h3>
+              <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-2 text-center">{t('hobbies.items.mountaineering.title')}</h3>
               <p className="text-sm text-slate-600 dark:text-slate-400">
-                Passionate about alpine adventures including summiting Mont Blanc, tour skiing the Haute Route, and trail running in the mountains.
+                {t('hobbies.items.mountaineering.description')}
               </p>
             </div>
             <div className="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg p-6 hover:border-primary transition-colors">
               <div className="text-4xl mb-3 text-center">🏀</div>
-              <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-2 text-center">Basketball</h3>
+              <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-2 text-center">{t('hobbies.items.basketball.title')}</h3>
               <p className="text-sm text-slate-600 dark:text-slate-400">
-                Played competitively for 12 years in regional teams, developing teamwork, discipline, and leadership skills on and off the court.
+                {t('hobbies.items.basketball.description')}
               </p>
             </div>
             <div className="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg p-6 hover:border-primary transition-colors">
               <div className="text-4xl mb-3 text-center">💻</div>
-              <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-2 text-center">Technology</h3>
+              <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-2 text-center">{t('hobbies.items.technology.title')}</h3>
               <p className="text-sm text-slate-600 dark:text-slate-400">
-                Co-founded a tech startup, created mobile apps, contribute to open source projects, and maintain a development blog to share knowledge with the community.
+                {t('hobbies.items.technology.description')}
               </p>
             </div>
           </div>
@@ -410,10 +425,9 @@ export default function Home() {
       {/* Contact Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold mb-8 text-orange-500">Get In Touch</h2>
+          <h2 className="text-3xl font-bold mb-8 text-orange-500">{t('contact.title')}</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 mb-6">
-            I'm always open to discussing new projects, creative ideas, or opportunities
-            to be part of your vision.
+            {t('contact.intro')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
             <a
@@ -424,7 +438,7 @@ export default function Home() {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              Download CV
+              {t('contact.downloadCV')}
             </a>
             <a
               href="mailto:gabriel.muller.12@gmail.com"
@@ -433,7 +447,7 @@ export default function Home() {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Email Me
+              {t('contact.emailMe')}
             </a>
             <a
               href="https://github.com/HoplaGeiss"
@@ -444,7 +458,7 @@ export default function Home() {
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                 <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
               </svg>
-              View GitHub
+              {t('contact.viewGithub')}
             </a>
             <a
               href="https://uk.linkedin.com/in/mullergab"
@@ -455,7 +469,7 @@ export default function Home() {
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
-              LinkedIn
+              {t('contact.linkedin')}
             </a>
             <a
               href="https://hoplageiss.github.io/CommitX/"
@@ -466,7 +480,7 @@ export default function Home() {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
-              Portfolio App
+              {t('contact.portfolioApp')}
             </a>
           </div>
         </div>

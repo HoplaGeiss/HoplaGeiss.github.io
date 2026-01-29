@@ -1,0 +1,168 @@
+{
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "title": "Senior Fullstack-Entwickler (JS/TS Fokus)",
+    "intro1": "Software-Ingenieur mit 10 Jahren Erfahrung.",
+    "intro2": "In meinen letzten vier Positionen leitete ich die UI-Architektur von Front-End-Anwendungen und habe Erfahrung in der Leitung von bis zu 10 UI-Entwicklern über mehrere Scrum-Teams hinweg.",
+    "intro3": "Sehr praxisorientiert mit starkem Fokus auf End-to-End-Tests (Cypress, Playwright) und Verwaltung/Optimierung von UI CI/CD-Pipelines.",
+    "intro4": "Erfahren mit mehreren Backend-Technologien—am stärksten mit Node.js/NestJS, aber auch vertraut mit Ruby, .NET und Java.",
+    "intro5": "Komfortabel im unabhängigen Arbeiten oder bei der Leitung mehrerer Entwickler in agilen Umgebungen.",
+    "intro6": "Ich besitze zwei MSc-Abschlüsse—einen in paralleler und verteilter Datenverarbeitung und einen anderen in IT-Management."
+  },
+  "skills": {
+    "title": "Fähigkeiten & Technologien",
+    "categories": {
+      "frontend": "Front End",
+      "mobile": "Mobile",
+      "backend": "Back End",
+      "cicd": "CI/CD",
+      "testing": "Tests",
+      "other": "Andere"
+    },
+    "showLess": "− Weniger anzeigen",
+    "more": "weitere"
+  },
+  "experience": {
+    "title": "Berufserfahrung",
+    "contract": "Vertrag",
+    "permanent": "Festanstellung",
+    "present": "Heute",
+    "jobs": {
+      "postfinance": {
+        "title": "Lead Angular-Entwickler",
+        "period": "Juli 2025 - Heute",
+        "subtitle": "Analytics-Team - Internes Reporting-Tool",
+        "responsibilities": [
+          "Entwicklung eines fortschrittlichen internen Reporting-Tools für Stakeholder zur Erstellung von Berichten und Erkenntnissen über PostFinance-Datenbanken",
+          "Arbeit mit Angular 18, Angular Material und ECharts",
+          "Leitung der End-to-End-Test-Implementierung mit Playwright",
+          "Einrichtung und Wartung von GitLab CI/CD-Pipelines"
+        ]
+      },
+      "suva": {
+        "title": "Lead Angular-Entwickler",
+        "period": "Juli 2024 - Dezember 2024 (6 Monate)",
+        "subtitle": "Interne Webanwendungen - Bearbeitung von Kundenforderungen",
+        "responsibilities": [
+          "Entwicklung und Wartung von vier internen Webanwendungen, die von ~500 Kollegen genutzt werden",
+          "Entwicklung von Funktionen mit Angular 18, PrimeNG und Redux",
+          "Erstellung und Wartung von End-to-End-Tests mit Playwright"
+        ]
+      },
+      "swissre": {
+        "title": "Lead Angular / Java-Entwickler",
+        "period": "November 2019 - Juni 2024 (~4,5 Jahre)",
+        "subtitle": "Finanzabteilung - Angular-Modernisierung",
+        "responsibilities": [
+          "Leitung der UI-Architektur über mehrere Teams hinweg (10 Front-End-Entwickler über 6 Scrum-Teams)",
+          "Erstellung einer gemeinsamen UI-Komponentenbibliothek von Grund auf, die von allen Teams verwendet wird (45+ Komponenten, basierend auf Angular Material)",
+          "Entwicklung zahlreicher Angular [8-17]-Anwendungen zur Modernisierung der Prozesse der Finanzabteilung",
+          "Verwaltung und Wartung von Front-End Azure CI/CD-Pipelines",
+          "Erstellung und Wartung von Backend-APIs in Java",
+          "Leitung der Cypress End-to-End-Test-Implementierung mit Docker"
+        ]
+      },
+      "marksandspencer": {
+        "title": "Senior JS / React-Entwickler",
+        "period": "Februar 2019 - November 2019 (9 Monate)",
+        "subtitle": "Sofa-Konfigurator-Projekt",
+        "responsibilities": [
+          "Leitung der Entwicklung der Filialsuche-Kartenintegration mit Vanilla JS und Bing Maps V8",
+          "Entwicklung einer interaktiven Sofa-Konfigurator-Anwendung mit React.js"
+        ]
+      },
+      "managed247": {
+        "title": "Lead Angular / Node-Entwickler",
+        "period": "April 2017 - Januar 2019 (~2 Jahre)",
+        "subtitle": "Cloud-basiertes Echtzeit-Analytics-System",
+        "responsibilities": [
+          "Architektur einer Full-Stack-Anwendung von Grund auf mit Angular 6, Node.js, Express und MongoDB",
+          "Entwicklung benutzerdefinierter Echtzeit-Datenvisualisierung mit d3.js, Socket.io und SignalR",
+          "Entwicklung hochgradig anpassbarer Dashboards mit Gridster.js, RxJS und Redux",
+          "Erforschung und Implementierung einer CI/CD-Pipeline mit Docker, Codeship und Quay.io"
+        ]
+      },
+      "workforce": {
+        "title": "Angular-Entwickler / Scrum Master",
+        "period": "März 2016 - Februar 2017 (~1 Jahr)",
+        "subtitle": "Planungs- und Prognosesoftware als SaaS-Lösung",
+        "responsibilities": [
+          "Moderation von Scrum-Zeremonien einschließlich Grooming, Sprint-Planung und Retrospektiven",
+          "Vorantreiben kontinuierlicher Verbesserungsinitiativen, die die Teamproduktivität steigerten",
+          "Erhöhung der Angular.js Unit-Test-Abdeckung von 60% auf 90%",
+          "Leitung der automatisierten End-to-End-Test-Implementierung"
+        ]
+      },
+      "unisphere": {
+        "title": "Startup-Mitgründer",
+        "company": "Unisphere",
+        "period": "September 2014 - März 2016 (~1,5 Jahre)",
+        "subtitle": "Cloud-basierte virtuelle Lernumgebung",
+        "responsibilities": [
+          "Entwicklung eines Angular.js / Ruby on Rails MVP in 5 Monaten, eingesetzt an 5 Universitäten",
+          "Ausgewählt für die Inkubatoren in Straßburg und Oxford",
+          "Umfangreiche Erfahrung im SaaS-Produktlebenszyklus, UX/UI-Entwicklung, Kundenerfolg und Investor Pitching gesammelt"
+        ]
+      }
+    }
+  },
+  "education": {
+    "title": "Ausbildung",
+    "degrees": {
+      "cranfield": {
+        "title": "MSc in verteilter & paralleler Datenverarbeitung",
+        "school": "Cranfield University, UK",
+        "period": "September 2013 - September 2014",
+        "description": "Schwerpunkt auf paralleler Datenverarbeitung und Hochleistungsrechnen. Praktische Erfahrung in Virtualisierung, Containerisierung und Cloud-Computing durch die hochmoderne Supercomputer-Einrichtung ASTRAL der Universität."
+      },
+      "esigelec": {
+        "title": "MSc in IT-Management",
+        "school": "Ingenieurschule Rouen (ESIGELEC), Frankreich",
+        "period": "September 2013 - September 2014",
+        "description": "Entwicklung eines umfassenden Verständnisses der Informatik durch praktische Erfahrung mit mehreren Programmiersprachen und Technologien. Projektbasierter Lehrplan, der starke Kommunikations- und Zusammenarbeitsfähigkeiten aufbaute."
+      }
+    }
+  },
+  "languages": {
+    "title": "Sprachen",
+    "list": {
+      "french": "Französisch",
+      "alsatian": "Elsässisch",
+      "english": "Englisch",
+      "german": "Deutsch",
+      "polish": "Polnisch"
+    },
+    "levels": {
+      "native": "Nativ",
+      "fluent": "Fließend",
+      "c1": "C1",
+      "basic": "Basis"
+    }
+  },
+  "hobbies": {
+    "title": "Interessen & Hobbys",
+    "items": {
+      "mountaineering": {
+        "title": "Bergsteigen",
+        "description": "Leidenschaftlich für alpine Abenteuer einschließlich der Besteigung des Mont Blanc, Skitourenfahren auf der Haute Route und Trailrunning in den Bergen."
+      },
+      "basketball": {
+        "title": "Basketball",
+        "description": "12 Jahre lang in regionalen Teams gespielt, dabei Teamwork, Disziplin und Führungsqualitäten auf und neben dem Platz entwickelt."
+      },
+      "technology": {
+        "title": "Technologie",
+        "description": "Mitbegründung eines Tech-Startups, Erstellung mobiler Apps, Beiträge zu Open-Source-Projekten und Pflege eines Entwicklungsblogs zum Teilen von Wissen mit der Community."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "intro": "Ich bin immer offen für die Diskussion neuer Projekte, kreativer Ideen oder Möglichkeiten, Teil Ihrer Vision zu sein.",
+    "downloadCV": "Lebenslauf",
+    "emailMe": "E-Mail",
+    "viewGithub": "GitHub",
+    "linkedin": "LinkedIn",
+    "portfolioApp": "Portfolio"
+  }
+}

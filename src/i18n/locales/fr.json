@@ -1,0 +1,168 @@
+{
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "title": "Développeur Fullstack Senior (Focus JS/TS)",
+    "intro1": "Ingénieur logiciel avec 10 ans d'expérience.",
+    "intro2": "Dans mes quatre derniers postes, j'ai dirigé l'architecture UI d'applications front-end et j'ai l'expérience de la direction de jusqu'à 10 développeurs UI répartis sur plusieurs équipes scrum.",
+    "intro3": "Très pratique avec une forte concentration sur les tests end-to-end (Cypress, Playwright) et la gestion/optimisation des pipelines CI/CD UI.",
+    "intro4": "Expérience avec plusieurs technologies backend—plus fort avec Node.js/NestJS, mais à l'aise avec Ruby, .NET et Java.",
+    "intro5": "À l'aise pour travailler de manière indépendante ou diriger plusieurs développeurs dans des environnements agiles.",
+    "intro6": "Je détiens deux diplômes MSc—l'un en calcul parallèle et distribué et l'autre en gestion IT."
+  },
+  "skills": {
+    "title": "Compétences & Technologies",
+    "categories": {
+      "frontend": "Front End",
+      "mobile": "Mobile",
+      "backend": "Back End",
+      "cicd": "CI/CD",
+      "testing": "Tests",
+      "other": "Autre"
+    },
+    "showLess": "− Afficher moins",
+    "more": "plus"
+  },
+  "experience": {
+    "title": "Expérience",
+    "contract": "Contrat",
+    "permanent": "CDI",
+    "present": "Présent",
+    "jobs": {
+      "postfinance": {
+        "title": "Lead Développeur Angular",
+        "period": "Juillet 2025 - Présent",
+        "subtitle": "Équipe Analytics - Outil de Reporting Interne",
+        "responsibilities": [
+          "Développement d'un outil de reporting interne avancé pour les parties prenantes afin de créer des rapports et des insights sur les bases de données PostFinance",
+          "Travail avec Angular 18, Angular Material et ECharts",
+          "Direction de l'implémentation des tests end-to-end avec Playwright",
+          "Configuration et maintenance des pipelines GitLab CI/CD"
+        ]
+      },
+      "suva": {
+        "title": "Lead Développeur Angular",
+        "period": "Juillet 2024 - Décembre 2024 (6 mois)",
+        "subtitle": "Applications Web Internes - Traitement des Réclamations Clients",
+        "responsibilities": [
+          "Développement et maintenance de quatre applications web internes utilisées par ~500 collègues",
+          "Développement de fonctionnalités avec Angular 18, PrimeNG et Redux",
+          "Création et maintenance des tests end-to-end avec Playwright"
+        ]
+      },
+      "swissre": {
+        "title": "Lead Développeur Angular / Java",
+        "period": "Novembre 2019 - Juin 2024 (~4,5 ans)",
+        "subtitle": "Département Finance - Modernisation Angular",
+        "responsibilities": [
+          "Direction de l'architecture UI à travers plusieurs équipes (10 développeurs front-end sur 6 équipes scrum)",
+          "Création d'une bibliothèque de composants UI partagés à partir de zéro utilisée par toutes les équipes (45+ composants, basés sur Angular Material)",
+          "Développement de nombreuses applications Angular [8-17] pour moderniser les processus du département financier",
+          "Gestion et maintenance des pipelines Azure CI/CD front-end",
+          "Création et maintenance d'APIs backend en Java",
+          "Direction de l'implémentation des tests end-to-end Cypress avec Docker"
+        ]
+      },
+      "marksandspencer": {
+        "title": "Développeur JS / React Senior",
+        "period": "Février 2019 - Novembre 2019 (9 mois)",
+        "subtitle": "Projet Configurateur de Canapés",
+        "responsibilities": [
+          "Direction du développement de l'intégration de la carte de localisation de magasins avec Vanilla JS et Bing Maps V8",
+          "Développement d'une application de configurateur de canapés interactive avec React.js"
+        ]
+      },
+      "managed247": {
+        "title": "Lead Développeur Angular / Node",
+        "period": "Avril 2017 - Janvier 2019 (~2 ans)",
+        "subtitle": "Système d'Analytique Temps Réel Basé sur le Cloud",
+        "responsibilities": [
+          "Architecture d'une application full-stack à partir de zéro avec Angular 6, Node.js, Express et MongoDB",
+          "Développement d'une visualisation de données temps réel personnalisée avec d3.js, Socket.io et SignalR",
+          "Développement de tableaux de bord hautement personnalisables avec Gridster.js, RxJS et Redux",
+          "Recherche et implémentation d'un pipeline CI/CD avec Docker, Codeship et Quay.io"
+        ]
+      },
+      "workforce": {
+        "title": "Développeur Angular / Scrum Master",
+        "period": "Mars 2016 - Février 2017 (~1 an)",
+        "subtitle": "Solution SaaS de Planification et Prévision",
+        "responsibilities": [
+          "Animation des cérémonies scrum incluant le grooming, la planification de sprint et les rétrospectives",
+          "Conduite d'initiatives d'amélioration continue ayant augmenté la productivité de l'équipe",
+          "Augmentation de la couverture des tests unitaires Angular.js de 60% à 90%",
+          "Direction de l'implémentation des tests end-to-end automatisés"
+        ]
+      },
+      "unisphere": {
+        "title": "Co-fondateur de Startup",
+        "company": "Unisphere",
+        "period": "Septembre 2014 - Mars 2016 (~1,5 ans)",
+        "subtitle": "Environnement d'Apprentissage Virtuel Basé sur le Cloud",
+        "responsibilities": [
+          "Développement d'un MVP Angular.js / Ruby on Rails en 5 mois, déployé dans 5 universités",
+          "Sélection pour rejoindre les incubateurs de Strasbourg et d'Oxford",
+          "Acquisition d'une expérience approfondie dans le cycle de vie des produits SaaS, le développement UX/UI, le succès client et le pitch auprès des investisseurs"
+        ]
+      }
+    }
+  },
+  "education": {
+    "title": "Formation",
+    "degrees": {
+      "cranfield": {
+        "title": "MSc en Calcul Distribué & Parallèle",
+        "school": "Université de Cranfield, Royaume-Uni",
+        "period": "Septembre 2013 - Septembre 2014",
+        "description": "Spécialisé en calcul parallèle et calcul haute performance. Expérience pratique en virtualisation, conteneurisation et cloud computing grâce aux installations de supercalculateur ASTRAL de pointe de l'université."
+      },
+      "esigelec": {
+        "title": "MSc en Gestion IT",
+        "school": "École d'Ingénieurs de Rouen (ESIGELEC), France",
+        "period": "Septembre 2013 - Septembre 2014",
+        "description": "Développement d'une compréhension approfondie de l'informatique à travers une expérience pratique avec plusieurs langages de programmation et technologies. Programme basé sur des projets ayant développé de solides compétences en communication et collaboration."
+      }
+    }
+  },
+  "languages": {
+    "title": "Langues",
+    "list": {
+      "french": "Français",
+      "alsatian": "Alsacien",
+      "english": "Anglais",
+      "german": "Allemand",
+      "polish": "Polonais"
+    },
+    "levels": {
+      "native": "Natif",
+      "fluent": "Courant",
+      "c1": "C1",
+      "basic": "Notions"
+    }
+  },
+  "hobbies": {
+    "title": "Centres d'Intérêt & Loisirs",
+    "items": {
+      "mountaineering": {
+        "title": "Alpinisme",
+        "description": "Passionné par les aventures alpines incluant l'ascension du Mont Blanc, le ski de randonnée sur la Haute Route et le trail running en montagne."
+      },
+      "basketball": {
+        "title": "Basketball",
+        "description": "Joué en compétition pendant 12 ans dans des équipes régionales, développant l'esprit d'équipe, la discipline et les compétences en leadership sur et hors du terrain."
+      },
+      "technology": {
+        "title": "Technologie",
+        "description": "Co-fondé une startup tech, créé des applications mobiles, contribué à des projets open source et maintenu un blog de développement pour partager mes connaissances avec la communauté."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "intro": "Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités de faire partie de votre vision.",
+    "downloadCV": "Télécharger CV",
+    "emailMe": "Email",
+    "viewGithub": "GitHub",
+    "linkedin": "LinkedIn",
+    "portfolioApp": "Portfolio"
+  }
+}

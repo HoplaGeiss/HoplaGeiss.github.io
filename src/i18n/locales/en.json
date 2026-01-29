@@ -1,0 +1,168 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "Senior Fullstack Developer (JS/TS Focus)",
+    "intro1": "Software engineer with 10 years of experience.",
+    "intro2": "In my last four roles, I led the UI architecture of front-end applications and have experience leading up to 10 UI developers across multiple scrum teams.",
+    "intro3": "Highly hands-on with a strong focus on end-to-end testing (Cypress, Playwright) and owning/optimizing UI CI/CD pipelines.",
+    "intro4": "Experienced with multiple backend technologies—strongest with Node.js/NestJS, but comfortable with Ruby, .NET, and Java.",
+    "intro5": "Comfortable working independently or leading multiple developers in agile environments.",
+    "intro6": "I hold two MSc degrees—one in Parallel and Distributed Computing and another in IT Management."
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "categories": {
+      "frontend": "Front End",
+      "mobile": "Mobile",
+      "backend": "Back End",
+      "cicd": "CI/CD",
+      "testing": "Testing",
+      "other": "Other"
+    },
+    "showLess": "− Show less",
+    "more": "more"
+  },
+  "experience": {
+    "title": "Experience",
+    "contract": "Contract",
+    "permanent": "Permanent",
+    "present": "Present",
+    "jobs": {
+      "postfinance": {
+        "title": "Lead Angular Developer",
+        "period": "July 2025 - Present",
+        "subtitle": "Analytics Team - Internal Reporting Tool",
+        "responsibilities": [
+          "Developing advanced internal reporting tool for stakeholders to create reports and insights on PostFinance databases",
+          "Working with Angular 18, Angular Material, and ECharts",
+          "Leading end-to-end test implementation with Playwright",
+          "Setting up and maintaining GitLab CI/CD pipelines"
+        ]
+      },
+      "suva": {
+        "title": "Lead Angular Developer",
+        "period": "July 2024 - December 2024 (6 months)",
+        "subtitle": "Internal Web Applications - Client Claims Processing",
+        "responsibilities": [
+          "Developed and maintained four internal web applications used by ~500 colleagues",
+          "Built features using Angular 18, PrimeNG, and Redux",
+          "Created and maintained end-to-end tests with Playwright"
+        ]
+      },
+      "swissre": {
+        "title": "Lead Angular / Java Developer",
+        "period": "November 2019 - June 2024 (~4.5 years)",
+        "subtitle": "Finance Department - Angular Modernization",
+        "responsibilities": [
+          "Led UI architecture across multiple teams (10 front-end developers across 6 scrum teams)",
+          "Created a shared UI components library from scratch used by all teams (45+ components, based on Angular Material)",
+          "Built numerous Angular [8-17] applications to modernize finance department processes",
+          "Owned and maintained front-end Azure CI/CD pipelines",
+          "Created and maintained backend APIs in Java",
+          "Led Cypress end-to-end testing implementation with Docker"
+        ]
+      },
+      "marksandspencer": {
+        "title": "Senior JS / React Developer",
+        "period": "February 2019 - November 2019 (9 months)",
+        "subtitle": "Sofa Configurator Project",
+        "responsibilities": [
+          "Led development of store locator map integration using Vanilla JS and Bing Maps V8",
+          "Built interactive sofa configurator application using React.js"
+        ]
+      },
+      "managed247": {
+        "title": "Lead Angular / Node Developer",
+        "period": "April 2017 - January 2019 (~2 years)",
+        "subtitle": "Cloud-based Real-time Analytics System",
+        "responsibilities": [
+          "Architected full-stack application from scratch using Angular 6, Node.js, Express, and MongoDB",
+          "Built custom real-time data visualization using d3.js, Socket.io, and SignalR",
+          "Developed highly customizable dashboards using Gridster.js, RxJS, and Redux",
+          "Researched and implemented CI/CD pipeline using Docker, Codeship, and Quay.io"
+        ]
+      },
+      "workforce": {
+        "title": "Angular Developer / Scrum Master",
+        "period": "March 2016 - February 2017 (~1 year)",
+        "subtitle": "Scheduling and Forecasting SaaS Solution",
+        "responsibilities": [
+          "Facilitated scrum ceremonies including grooming, sprint planning, and retrospectives",
+          "Drove continuous improvement initiatives that increased team productivity",
+          "Increased Angular.js unit test coverage from 60% to 90%",
+          "Led automated end-to-end testing implementation"
+        ]
+      },
+      "unisphere": {
+        "title": "Startup Co-founder",
+        "company": "Unisphere",
+        "period": "September 2014 - March 2016 (~1.5 years)",
+        "subtitle": "Cloud-based Virtual Learning Environment",
+        "responsibilities": [
+          "Built Angular.js / Ruby on Rails MVP in 5 months, deployed to 5 universities",
+          "Selected to join both Strasbourg and Oxford incubators",
+          "Gained extensive experience in SaaS product lifecycle, UX/UI development, customer success, and investor pitching"
+        ]
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "degrees": {
+      "cranfield": {
+        "title": "MSc in Distributed & Parallel Computing",
+        "school": "Cranfield University, UK",
+        "period": "September 2013 - September 2014",
+        "description": "Focused on parallel computing and high-performance computing. Gained hands-on experience in virtualization, containerization, and cloud computing through the university's cutting-edge supercomputer facility ASTRAL."
+      },
+      "esigelec": {
+        "title": "MSc in IT Management",
+        "school": "Rouen Engineering School (ESIGELEC), France",
+        "period": "September 2013 - September 2014",
+        "description": "Developed comprehensive understanding of computer science through hands-on experience with multiple programming languages and technologies. Project-based curriculum built strong communication and collaboration skills."
+      }
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "list": {
+      "french": "French",
+      "alsatian": "Alsatian",
+      "english": "English",
+      "german": "German",
+      "polish": "Polish"
+    },
+    "levels": {
+      "native": "Native",
+      "fluent": "Fluent",
+      "c1": "C1",
+      "basic": "Basic"
+    }
+  },
+  "hobbies": {
+    "title": "Interests & Hobbies",
+    "items": {
+      "mountaineering": {
+        "title": "Mountaineering",
+        "description": "Passionate about alpine adventures including summiting Mont Blanc, tour skiing the Haute Route, and trail running in the mountains."
+      },
+      "basketball": {
+        "title": "Basketball",
+        "description": "Played competitively for 12 years in regional teams, developing teamwork, discipline, and leadership skills on and off the court."
+      },
+      "technology": {
+        "title": "Technology",
+        "description": "Co-founded a tech startup, created mobile apps, contribute to open source projects, and maintain a development blog to share knowledge with the community."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "intro": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "downloadCV": "Download CV",
+    "emailMe": "Email Me",
+    "viewGithub": "View GitHub",
+    "linkedin": "LinkedIn",
+    "portfolioApp": "Portfolio App"
+  }
+}
