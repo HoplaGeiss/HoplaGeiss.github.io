@@ -24,7 +24,7 @@ export default function Blog() {
         const postsData = await Promise.all(
           postSlugs.map(async (slug) => {
             try {
-              const response = await fetch(`/hoplaWeb/blog/${slug}.md`);
+              const response = await fetch(`/blog/${slug}.md`);
               const text = await response.text();
               const { data } = matter(text);
               

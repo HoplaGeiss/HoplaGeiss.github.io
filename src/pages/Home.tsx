@@ -53,9 +53,9 @@ export default function Home() {
             {/* Profile Picture */}
             <div className="flex-shrink-0">
               <img
-                srcSet="/hoplaWeb/images/profile-200w.jpg 200w, /hoplaWeb/images/profile-300w.jpg 300w, /hoplaWeb/images/profile-400w.jpg 400w"
+                srcSet="/images/profile-200w.jpg 200w, /images/profile-300w.jpg 300w, /images/profile-400w.jpg 400w"
                 sizes="(max-width: 768px) 200px, (max-width: 1024px) 300px, 400px"
-                src="/hoplaWeb/images/profile-300w.jpg"
+                src="/images/profile-300w.jpg"
                 alt="Gabriel Muller"
                 className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-primary shadow-lg shadow-primary/20"
                 loading="eager"
@@ -345,7 +345,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
             <a
-              href="/hoplaWeb/Gabriel_Muller_CV.pdf"
+              href="/Gabriel_Muller_CV.pdf"
               download="Gabriel_Muller_CV.pdf"
               className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors shadow-lg"
             >

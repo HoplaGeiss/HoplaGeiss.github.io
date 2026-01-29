@@ -25,7 +25,7 @@ export default function Post() {
       if (!slug) return;
       
       try {
-        const response = await fetch(`/hoplaWeb/blog/${slug}.md`);
+        const response = await fetch(`/blog/${slug}.md`);
         
         if (!response.ok) {
           setError(true);
