@@ -157,15 +157,29 @@ export default function Home() {
                 <span className="text-orange-500">Gabriel Muller</span>
               </h1>
               <p className="text-2xl md:text-3xl text-slate-700 dark:text-slate-300 mb-6">
-                {t('hero.title')}
+                {t('hero.title').split(' | ')[0]}
+                <br />
+                {t('hero.title').split(' | ')[1]}
               </p>
-              <div className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed space-y-2">
-                <p>{t('hero.intro1')}</p>
-                <p>{t('hero.intro2')}</p>
-                <p>{t('hero.intro3')}</p>
-                <p>{t('hero.intro4')}</p>
-                <p>{t('hero.intro5')}</p>
-                <p>{t('hero.intro6')}</p>
+              
+              {/* Summary Section */}
+              <div className="mb-6">
+                <h2 className="text-xl font-bold text-orange-500 mb-3">{t('hero.summaryTitle')}</h2>
+                <div className="text-base text-slate-600 dark:text-slate-400 leading-relaxed space-y-2">
+                  <p>{t('hero.intro1')}</p>
+                  <p>{t('hero.intro2')}</p>
+                </div>
+              </div>
+
+              {/* Key Achievements Section */}
+              <div>
+                <h2 className="text-xl font-bold text-orange-500 mb-3">{t('hero.achievementsTitle')}</h2>
+                <ul className="text-base text-slate-600 dark:text-slate-400 leading-relaxed space-y-2 list-disc list-inside">
+                  <li>{t('hero.intro3')}</li>
+                  <li>{t('hero.intro4')}</li>
+                  <li>{t('hero.intro5')}</li>
+                  <li>{t('hero.intro6')}</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -364,7 +378,7 @@ export default function Home() {
                 { key: 'alsatian', level: 5, labelKey: 'native' },
                 { key: 'english', level: 5, labelKey: 'fluent' },
                 { key: 'german', level: 3.5, labelKey: 'c1' },
-                { key: 'polish', level: 1.5, labelKey: 'basic' }
+                { key: 'polish', level: 1.5, labelKey: 'a2' }
               ].map((lang) => (
                 <div key={lang.key} className="flex items-center gap-3">
                   <span className="text-slate-700 dark:text-slate-300 font-medium w-24 text-sm">{t(`languages.list.${lang.key}`)}</span>

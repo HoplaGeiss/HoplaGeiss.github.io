@@ -1,13 +1,15 @@
 {
   "hero": {
     "greeting": "Bonjour, je suis",
-    "title": "Développeur Fullstack Senior (Focus JS/TS)",
-    "intro1": "Ingénieur logiciel avec 10 ans d'expérience.",
-    "intro2": "Dans mes quatre derniers postes, j'ai dirigé l'architecture UI d'applications front-end et j'ai l'expérience de la direction de jusqu'à 10 développeurs UI répartis sur plusieurs équipes scrum.",
-    "intro3": "Très pratique avec une forte concentration sur les tests end-to-end (Cypress, Playwright) et la gestion/optimisation des pipelines CI/CD UI.",
-    "intro4": "Expérience avec plusieurs technologies backend—plus fort avec Node.js/NestJS, mais à l'aise avec Ruby, .NET et Java.",
-    "intro5": "À l'aise pour travailler de manière indépendante ou diriger plusieurs développeurs dans des environnements agiles.",
-    "intro6": "Je détiens deux diplômes MSc—l'un en calcul parallèle et distribué et l'autre en gestion IT."
+    "title": "Ingénieur Logiciel Senior | Angular – Visualisation de Données",
+    "summaryTitle": "Résumé",
+    "achievementsTitle": "Réalisations Clés",
+    "intro1": "Ingénieur frontend senior avec 12 ans d'expérience dans le développement d'applications web d'entreprise à grande échelle et distribuées dans les secteurs de la finance et du SaaS.",
+    "intro2": "Spécialisé en architecture frontend, optimisation des performances, pipelines CI/CD et frameworks de tests end-to-end.",
+    "intro3": "Direction de l'architecture frontend sur 6 équipes Scrum (~10 ingénieurs) développant des outils financiers d'entreprise chez Swiss Re.",
+    "intro4": "Développement d'une bibliothèque partagée interne (45+ composants) adoptée dans toutes les applications du département financier.",
+    "intro5": "Optimisation des tableaux de bord analytiques chez PostFinance, réduisant le temps de rendu de 25s → 2s, les nœuds DOM de 170k → 17k et la taille du bundle de 3.25MB → 1.73MB.",
+    "intro6": "Conception de pipelines CI/CD et stratégies de tests end-to-end (Playwright, Cypress) utilisés dans plusieurs applications d'entreprise."
   },
   "skills": {
     "title": "Compétences & Technologies",
@@ -29,79 +31,85 @@
     "present": "Présent",
     "jobs": {
       "postfinance": {
-        "title": "Lead Développeur Angular",
+        "title": "Lead Ingénieur Frontend",
         "period": "Juillet 2025 - Présent",
-        "subtitle": "Équipe Analytics - Outil de Reporting Interne",
+        "subtitle": "Plateforme d'Analyse de Données",
         "responsibilities": [
-          "Développement d'un outil de reporting interne avancé pour les parties prenantes afin de créer des rapports et des insights sur les bases de données PostFinance",
-          "Travail avec Angular 18, Angular Material et ECharts",
-          "Direction de l'implémentation des tests end-to-end avec Playwright",
-          "Configuration et maintenance des pipelines GitLab CI/CD"
+          "Développement d'une plateforme d'analyse de données Angular 18 permettant à ~3 500 employés de générer des tableaux de bord dynamiquement à partir de définitions XML",
+          "Optimisation du rendu des grands tableaux de bord, réduisant les nœuds DOM de ~170k à ~17k et améliorant le temps de chargement de 25s à 2s",
+          "Réduction de la taille du bundle frontend de 3.25MB à 1.73MB, améliorant les performances au démarrage et à l'exécution",
+          "Réduction du temps de build complet de 241s à 11s et des rebuilds incrémentaux de 114s à 1.5s",
+          "Conception et implémentation du pipeline CI/CD avec GitLab, automatisant les workflows de build, test et déploiement",
+          "Construction de la suite de tests end-to-end Playwright pour valider les scénarios de reporting complexes",
+          "Animation d'ateliers internes Angular Signals, introduction de patterns Angular modernes"
         ]
       },
       "suva": {
-        "title": "Lead Développeur Angular",
+        "title": "Lead Ingénieur Frontend",
         "period": "Juillet 2024 - Décembre 2024 (6 mois)",
-        "subtitle": "Applications Web Internes - Traitement des Réclamations Clients",
+        "subtitle": "Applications de Traitement des Réclamations d'Assurance",
         "responsibilities": [
-          "Développement et maintenance de quatre applications web internes utilisées par ~500 collègues",
-          "Développement de fonctionnalités avec Angular 18, PrimeNG et Redux",
-          "Création et maintenance des tests end-to-end avec Playwright"
+          "Direction du développement de quatre applications Angular 18 internes utilisées par ~500 employés pour traiter les réclamations d'assurance",
+          "Conception d'une architecture de gestion d'état complexe avec Redux pour une gestion d'état prévisible",
+          "Implémentation d'un système de gestion de traductions avec Tolgee pour les besoins d'interface multilingue",
+          "Construction et maintenance de la suite de tests end-to-end Playwright pour améliorer la détection de régressions"
         ]
       },
       "swissre": {
-        "title": "Lead Développeur Angular / Java",
+        "title": "Lead Ingénieur Frontend",
         "period": "Novembre 2019 - Juin 2024 (~4,5 ans)",
-        "subtitle": "Département Finance - Modernisation Angular",
+        "subtitle": "Département Finance - Bibliothèque de Composants Partagés",
         "responsibilities": [
-          "Direction de l'architecture UI à travers plusieurs équipes (10 développeurs front-end sur 6 équipes scrum)",
-          "Création d'une bibliothèque de composants UI partagés à partir de zéro utilisée par toutes les équipes (45+ composants, basés sur Angular Material)",
-          "Développement de nombreuses applications Angular [8-17] pour moderniser les processus du département financier",
-          "Gestion et maintenance des pipelines Azure CI/CD front-end",
-          "Création et maintenance d'APIs backend en Java",
-          "Direction de l'implémentation des tests end-to-end Cypress avec Docker"
+          "Initiation et développement d'une bibliothèque partagée interne (45+ composants) basée sur Angular Material, utilisée dans les applications du département financier (~14 000 employés dans le monde)",
+          "Démarrage des composants partagés de manière indépendante et croissance organique de l'adoption à travers 6 équipes Scrum (~10 développeurs)",
+          "Direction du développement de la bibliothèque partagée en définissant la roadmap, gérant le backlog et collaborant avec les product owners",
+          "Introduction de la stratégie de tests end-to-end Cypress à travers les équipes",
+          "Introduction d'un test harness pour tester les composants frontend de bout en bout",
+          "Conception et maintenance des pipelines Azure CI/CD, optimisés pour s'exécuter en moins de 25 minutes avec parallélisation et cache"
         ]
       },
       "marksandspencer": {
-        "title": "Développeur JS / React Senior",
+        "title": "Lead Ingénieur Frontend",
         "period": "Février 2019 - Novembre 2019 (9 mois)",
-        "subtitle": "Projet Configurateur de Canapés",
+        "subtitle": "Plateforme E-commerce",
         "responsibilities": [
-          "Direction du développement de l'intégration de la carte de localisation de magasins avec Vanilla JS et Bing Maps V8",
-          "Développement d'une application de configurateur de canapés interactive avec React.js"
+          "Construction d'un configurateur de canapés basé sur React pour la plateforme e-commerce desservant ~30M de clients par an",
+          "Direction du développement de l'intégration de carte interactive avec Bing Maps V8 et Vanilla JavaScript",
+          "Contribution à la première intégration React dans un framework frontend maison legacy"
         ]
       },
       "managed247": {
-        "title": "Lead Développeur Angular / Node",
+        "title": "Lead Ingénieur",
         "period": "Avril 2017 - Janvier 2019 (~2 ans)",
-        "subtitle": "Système d'Analytique Temps Réel Basé sur le Cloud",
+        "subtitle": "Plateforme d'Analyse Temps Réel Cloud",
         "responsibilities": [
-          "Architecture d'une application full-stack à partir de zéro avec Angular 6, Node.js, Express et MongoDB",
-          "Développement d'une visualisation de données temps réel personnalisée avec d3.js, Socket.io et SignalR",
-          "Développement de tableaux de bord hautement personnalisables avec Gridster.js, RxJS et Redux",
-          "Recherche et implémentation d'un pipeline CI/CD avec Docker, Codeship et Quay.io"
+          "Architecture et développement d'une plateforme d'analyse temps réel cloud de zéro avec Angular, Node.js, Express et MongoDB",
+          "Construction de visualisations de données temps réel avec D3.js et WebSockets (Socket.IO, SignalR)",
+          "Développement de tableaux de bord hautement personnalisables avec Gridster, RxJS et Redux",
+          "Conception et implémentation du pipeline CI/CD avec Docker, Codeship et Quay.io"
         ]
       },
       "workforce": {
-        "title": "Développeur Angular / Scrum Master",
+        "title": "Ingénieur Frontend / Scrum Master",
         "period": "Mars 2016 - Février 2017 (~1 an)",
-        "subtitle": "Solution SaaS de Planification et Prévision",
+        "subtitle": "SaaS de Gestion de la Main-d'œuvre d'Entreprise",
         "responsibilities": [
-          "Animation des cérémonies scrum incluant le grooming, la planification de sprint et les rétrospectives",
-          "Conduite d'initiatives d'amélioration continue ayant augmenté la productivité de l'équipe",
-          "Augmentation de la couverture des tests unitaires Angular.js de 60% à 90%",
-          "Direction de l'implémentation des tests end-to-end automatisés"
+          "Contribution au développement d'une plateforme SaaS de gestion de la main-d'œuvre utilisée par de grandes enseignes internationales",
+          "Augmentation de la couverture des tests unitaires AngularJS de 60% à 90%",
+          "Migration de l'application d'AngularJS vers Angular 2",
+          "Direction des initiatives d'automatisation des tests end-to-end",
+          "Animation des cérémonies Scrum et des initiatives d'amélioration continue"
         ]
       },
       "unisphere": {
         "title": "Co-fondateur de Startup",
         "company": "Unisphere",
         "period": "Septembre 2014 - Mars 2016 (~1,5 ans)",
-        "subtitle": "Environnement d'Apprentissage Virtuel Basé sur le Cloud",
+        "subtitle": "Environnement d'Apprentissage Virtuel Cloud",
         "responsibilities": [
-          "Développement d'un MVP Angular.js / Ruby on Rails en 5 mois, déployé dans 5 universités",
-          "Sélection pour rejoindre les incubateurs de Strasbourg et d'Oxford",
-          "Acquisition d'une expérience approfondie dans le cycle de vie des produits SaaS, le développement UX/UI, le succès client et le pitch auprès des investisseurs"
+          "Construction d'un MVP AngularJS et Ruby on Rails améliorant la communication entre étudiants et enseignants",
+          "Livraison de la première plateforme prête pour la production en 5 mois, déployée dans 5 universités",
+          "Sélection pour rejoindre les programmes d'incubation de Strasbourg et Oxford"
         ]
       }
     }
@@ -113,13 +121,13 @@
         "title": "MSc en Calcul Distribué & Parallèle",
         "school": "Université de Cranfield, Royaume-Uni",
         "period": "Septembre 2013 - Septembre 2014",
-        "description": "Spécialisé en calcul parallèle et calcul haute performance. Expérience pratique en virtualisation, conteneurisation et cloud computing grâce aux installations de supercalculateur ASTRAL de pointe de l'université."
+        "description": "Spécialisé en calcul parallèle et calcul haute performance, travaillant avec le supercalculateur ASTRAL de l'université. Expérience acquise avec les systèmes distribués, la virtualisation, la conteneurisation et l'infrastructure cloud computing."
       },
       "esigelec": {
         "title": "MSc en Gestion IT",
         "school": "École d'Ingénieurs de Rouen (ESIGELEC), France",
         "period": "Septembre 2013 - Septembre 2014",
-        "description": "Développement d'une compréhension approfondie de l'informatique à travers une expérience pratique avec plusieurs langages de programmation et technologies. Programme basé sur des projets ayant développé de solides compétences en communication et collaboration."
+        "description": "Étude des sujets fondamentaux de l'informatique incluant les algorithmes, l'ingénierie logicielle et les systèmes distribués, avec une forte emphase sur le développement par projet et l'ingénierie collaborative."
       }
     }
   },
@@ -136,7 +144,7 @@
       "native": "Natif",
       "fluent": "Courant",
       "c1": "C1",
-      "basic": "Notions"
+      "a2": "A2"
     }
   },
   "hobbies": {
