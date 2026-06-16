@@ -1,11 +1,11 @@
 {
   "hero": {
     "greeting": "Bonjour, je suis",
-    "title": "Ingénieur Logiciel Senior | Angular – Visualisation de Données",
+    "title": "Développeur Angular Senior | Fullstack Java / Node.js",
     "summaryTitle": "Résumé",
     "achievementsTitle": "Réalisations Clés",
-    "intro1": "Ingénieur frontend senior avec 12 ans d'expérience dans le développement d'applications web d'entreprise à grande échelle et distribuées dans les secteurs de la finance et du SaaS.",
-    "intro2": "Spécialisé en architecture frontend, optimisation des performances, pipelines CI/CD et frameworks de tests end-to-end.",
+    "intro1": "Développeur Angular senior avec 12 ans d'expérience dans la création d'applications web évolutives et de plateformes fullstack en Java, Node.js et architecture frontend moderne.",
+    "intro2": "Allie une expertise Angular approfondie à un développement backend Java/Node.js, à l'optimisation des performances et à l'automatisation CI/CD en production.",
     "intro3": "Direction de l'architecture frontend sur 6 équipes Scrum (~10 ingénieurs) développant des outils financiers d'entreprise chez Swiss Re.",
     "intro4": "Développement d'une bibliothèque partagée interne (45+ composants) adoptée dans toutes les applications du département financier.",
     "intro5": "Optimisation des tableaux de bord analytiques chez PostFinance, réduisant le temps de rendu de 25s → 2s, les nœuds DOM de 170k → 17k et la taille du bundle de 3.25MB → 1.73MB.",
@@ -143,8 +143,10 @@
     "levels": {
       "native": "Natif",
       "fluent": "Courant",
+      "fluentC2": "Fluent - C2",
+      "fluentC1C2": "Fluent - C1/C2",
       "c1": "C1",
-      "a2": "A2"
+      "a2": "A2 - Basic"
     }
   },
   "hobbies": {
@@ -170,6 +172,10 @@
     "downloadCV": "Télécharger CV",
     "emailMe": "Email",
     "viewGithub": "GitHub",
+    "ngxHerald": "Bibliothèque Angular Toast",
+    "angularChallenges": "Défis Angular",
+    "commitX": "Collaborative Commitment mobile App",
+    "portfolioLabel": "Portfolio :",
     "linkedin": "LinkedIn",
     "portfolioApp": "Portfolio"
   }

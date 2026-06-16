@@ -1,11 +1,11 @@
 {
   "hero": {
     "greeting": "Hi, I'm",
-    "title": "Senior Software Engineer | Angular – Data Visualization",
+    "title": "Senior Angular Developer | Fullstack Java / Node.js",
     "summaryTitle": "Summary",
     "achievementsTitle": "Key Achievements",
-    "intro1": "Senior frontend engineer with 12 years of experience building large-scale and distributed enterprise web applications in finance and SaaS environments.",
-    "intro2": "Specialized in frontend architecture, performance optimization, CI/CD pipelines and end-to-end testing frameworks.",
+    "intro1": "Senior Angular developer with 12 years of experience building scalable web applications and fullstack platforms using Java and Node.js.",
+    "intro2": "Combines deep Angular expertise with backend Java/Node.js development, performance optimization, and production-grade CI/CD automation.",
     "intro3": "Led frontend architecture across 6 Scrum teams (~10 engineers) building enterprise finance tools at Swiss Re.",
     "intro4": "Built an internal shared library (45+ components) adopted across finance department applications.",
     "intro5": "Optimized analytics dashboards at PostFinance, reducing rendering time 25s → 2s, DOM nodes 170k → 17k, and bundle size 3.25MB → 1.73MB.",
@@ -143,8 +143,10 @@
     "levels": {
       "native": "Native",
       "fluent": "Fluent",
+      "fluentC2": "Fluent - C2",
+      "fluentC1C2": "Fluent - C1/C2",
       "c1": "C1",
-      "a2": "A2"
+      "a2": "A2 - Basic"
     }
   },
   "hobbies": {
@@ -170,6 +172,10 @@
     "downloadCV": "Download CV",
     "emailMe": "Email Me",
     "viewGithub": "View GitHub",
+    "ngxHerald": "Angular Toast Library",
+    "angularChallenges": "Angular Challenges",
+    "commitX": "Collaborative Commitment mobile App",
+    "portfolioLabel": "Portfolio:",
     "linkedin": "LinkedIn",
     "portfolioApp": "Portfolio App"
   }

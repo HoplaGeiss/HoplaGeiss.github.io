@@ -1,11 +1,11 @@
 {
   "hero": {
     "greeting": "Hallo, ich bin",
-    "title": "Senior Software-Ingenieur | Angular – Datenvisualisierung",
+    "title": "Senior Angular Entwickler | Fullstack Java / Node.js",
     "summaryTitle": "Zusammenfassung",
     "achievementsTitle": "Wichtigste Erfolge",
-    "intro1": "Senior Frontend-Ingenieur mit 12 Jahren Erfahrung in der Entwicklung von großen und verteilten Unternehmens-Webanwendungen in Finanz- und SaaS-Umgebungen.",
-    "intro2": "Spezialisiert auf Frontend-Architektur, Performance-Optimierung, CI/CD-Pipelines und End-to-End-Test-Frameworks.",
+    "intro1": "Senior Angular Entwickler mit 12 Jahren Erfahrung im Aufbau skalierbarer Webanwendungen und Fullstack-Plattformen mit Java, Node.js und moderner Frontend-Architektur.",
+    "intro2": "Kombiniert tiefes Angular-Wissen mit Backend-Entwicklung in Java/Node.js, Performance-Optimierung und produktionsreifen CI/CD-Automatisierungen.",
     "intro3": "Leitung der Frontend-Architektur über 6 Scrum-Teams (~10 Ingenieure) beim Bau von Unternehmens-Finanztools bei Swiss Re.",
     "intro4": "Entwicklung einer internen gemeinsamen Bibliothek (45+ Komponenten), die in allen Anwendungen der Finanzabteilung eingeführt wurde.",
     "intro5": "Optimierung von Analytics-Dashboards bei PostFinance, Reduzierung der Renderzeit von 25s → 2s, DOM-Knoten von 170k → 17k und Bundle-Größe von 3.25MB → 1.73MB.",
@@ -143,8 +143,10 @@
     "levels": {
       "native": "Nativ",
       "fluent": "Fließend",
+      "fluentC2": "Fluent - C2",
+      "fluentC1C2": "Fluent - C1/C2",
       "c1": "C1",
-      "a2": "A2"
+      "a2": "A2 - Basic"
     }
   },
   "hobbies": {
@@ -170,6 +172,10 @@
     "downloadCV": "Lebenslauf",
     "emailMe": "E-Mail",
     "viewGithub": "GitHub",
+    "ngxHerald": "Angular Toast Bibliothek",
+    "angularChallenges": "Angular Challenges",
+    "commitX": "Collaborative Commitment mobile App",
+    "portfolioLabel": "Portfolio:",
     "linkedin": "LinkedIn",
     "portfolioApp": "Portfolio"
   }
