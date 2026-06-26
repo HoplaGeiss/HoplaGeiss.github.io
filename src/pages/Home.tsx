@@ -192,6 +192,16 @@ export default function Home() {
                     {t('contact.commitX')}
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://www.npmjs.com/package/ngx-image-forge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors"
+                  >
+                    {t('contact.ngxImageForge')}
+                  </a>
+                </li>
               </ul>
             </div>
 
